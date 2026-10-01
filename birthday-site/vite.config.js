@@ -8,10 +8,7 @@ import tailwindcss from "@tailwindcss/vite";
 const hasMusic = existsSync(new URL("./public/music.mp3", import.meta.url));
 
 export default defineConfig({
-  base: '/bday/',
-
   plugins: [react(), tailwindcss()],
-
   define: {
     __HAS_MUSIC__: JSON.stringify(hasMusic),
   },
